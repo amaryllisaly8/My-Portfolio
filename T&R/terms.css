@@ -1,0 +1,232 @@
+:root{
+  --bg:#0f0f10;
+  --card:#1a1a1d;
+  --text:#eeeeee;
+  --muted:#bdbdbd;
+  --accent:#ff69b4;      
+  --accent-soft:#ffc1dc; 
+  --border:#2c2c31;
+}
+
+/* Base */
+html, body { height: 100%; }
+body{
+  margin:0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--text);
+  background: radial-gradient(1200px 600px at 15% 0%, rgba(255,105,180,0.10), transparent 50%),
+              radial-gradient(1200px 600px at 85% 100%, rgba(255,105,180,0.08), transparent 50%),
+              var(--bg);
+  line-height:1.6;
+   overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #111; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f48fb1; 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5c8d; 
+}
+
+
+* {
+  scrollbar-width: thin;         
+  scrollbar-color: #f48fb1 #111; 
+}
+
+.container{
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 18px;
+}
+
+/* Header */
+header{
+  text-align:center;
+  margin-bottom: 24px;
+}
+.badge{
+  display:inline-block;
+  padding:6px 12px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  color:var(--muted);
+  font-size:.8rem;
+  letter-spacing:.3px;
+  margin-bottom:10px;
+}
+h1{
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin: 8px 0 12px;
+  color: #ffb6c1;   
+
+}
+.subtitle{
+  color:var(--muted);
+  max-width:680px;
+  margin:0 auto 10px;
+}
+.updated{
+  color:var(--muted);
+  font-size:.85rem;
+  margin-top:6px;
+}
+
+
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+
+h2{
+  font-size:1.15rem;
+    color: #ffb6c1;   
+  margin: 18px 0 8px;
+}
+p, li{color:var(--text)}
+ul{
+  padding-left: 18px;
+  margin: 8px 0 16px;
+}
+.note{
+  background: rgba(255,105,180,0.08);
+  border:1px dashed var(--accent-soft);
+  color:var(--text);
+  border-radius:12px;
+  padding:12px;
+  margin-top:16px;
+  font-size:.95rem;
+}
+
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-family: Verdana, sans-serif;
+  font-size: 1rem;
+  border-radius: 40px;
+  padding: 10px 20px; 
+  color: #ffb6c1; 
+  border: 2px solid #ffb6c1;            
+  box-shadow: 0 8px 20px rgba(255,105,180,0.35);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ffb6c1;
+  color: black;              
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px #ffb6c1; 
+}
+
+
+.btn.secondary {
+  background-color: #ffb6c1;    
+  color: black;                 
+}
+
+.btn.secondary:hover {
+  background-color: #ffe1ea;    
+  color: black;                 
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px #ffb6c1;
+}
+
+
+footer {
+  width: 100%;                   
+  background-color: #121212;       
+  color: #fff;                   
+  text-align: center;            
+  padding: 25px 20px;            
+  font-family: Verdana;
+  box-sizing: border-box;        
+}
+
+footer h3 {
+  color: #ffb6c1;                  
+  margin: 0 0 5px 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #ddd;                
+}
+
+
+.divider{
+  height:1px; background:var(--border); margin: 18px 0 14px;
+  border-radius:999px;
+}
+
+
+.circle1,
+.circle2,
+.circle3,
+.circle4 {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #e191b1;
+  z-index: 0; /* stays behind skill-box */
+  opacity: 0.2; /* subtle effect */
+}
+
+.circle1 {
+  width: 150px;
+  height: 150px;
+  top: 40px;
+  left: 30px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.circle2 {
+  width: 150px;
+  height: 150px;
+  bottom: 30px;
+  right: 20px;
+  animation: float 8s ease-in-out infinite;
+}
+
+
+.circle3 {
+  width: 120px;
+  height: 120px;
+  top: 50%;
+  left: -30px; 
+  transform: translateY(-50%);
+  animation: float 7s ease-in-out infinite;
+}
+
+.circle4 {
+  width: 120px;
+  height: 120px;
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%);
+  animation: float 9s ease-in-out infinite;
+}
